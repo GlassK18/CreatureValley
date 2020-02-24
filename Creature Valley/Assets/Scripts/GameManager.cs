@@ -25,6 +25,8 @@ public class GameManager :  MonoBehaviour
 
     public void UpdateScreen()
     {
+        LevelCounterText.text = "Level: " + xp;
+        XPBar.value = xp;
         UnityEditor.SceneView.RepaintAll();
     }
 
@@ -43,6 +45,8 @@ public class GameManager :  MonoBehaviour
 
     public void Start()
     {
+        LevelCounterText.text = "Level: " + xp;
+        XPBar.value = xp;
         UnityEditor.SceneView.RepaintAll();
     }
 }
