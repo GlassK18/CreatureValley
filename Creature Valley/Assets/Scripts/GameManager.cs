@@ -20,33 +20,32 @@ public class GameManager :  MonoBehaviour
         LevelCounterText.text = "Level: " + xp;
         XPBar.value = xp;
         Debug.Log("Health Increased to: " + xp);
-        UnityEditor.SceneView.RepaintAll();
+        
     }
 
     public void UpdateScreen()
     {
         LevelCounterText.text = "Level: " + xp;
         XPBar.value = xp;
-        UnityEditor.SceneView.RepaintAll();
+        
     }
 
     public void LoadCreatureScene()
     {
         SceneManager.LoadScene("CreatureScreen");
         setXP();
-        UnityEditor.SceneView.RepaintAll();
+        
     }
 
     public void LoadMinigame1Scene()
     {
         SceneManager.LoadScene("Minigame1Scene");
-        UnityEditor.SceneView.RepaintAll();
+        
     }
 
     public void Start()
     {
         LevelCounterText.text = "Level: " + xp;
-        XPBar.value = xp;
-        UnityEditor.SceneView.RepaintAll();
+        XPBar.value = xp; 
     }
 }

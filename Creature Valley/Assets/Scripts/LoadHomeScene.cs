@@ -9,11 +9,11 @@ public class LoadHomeScene : MonoBehaviour
     {
         SceneManager.LoadScene("CreatureScreen");
         
-        UnityEditor.SceneView.RepaintAll();
+        
     }
 
     public void Start()
     {
-        UnityEditor.SceneView.RepaintAll();
+        
     }
 }

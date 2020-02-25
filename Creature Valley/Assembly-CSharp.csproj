@@ -88,6 +88,9 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/DAMcCoy4138/Documents/GitHub/CreatureValley/Creature Valley/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/DAMcCoy4138/Documents/GitHub/CreatureValley/Creature Valley/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/DAMcCoy4138/Documents/GitHub/CreatureValley/Creature Valley/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
