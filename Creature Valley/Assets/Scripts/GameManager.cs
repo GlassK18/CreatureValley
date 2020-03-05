@@ -19,8 +19,6 @@ public class GameManager :  MonoBehaviour
         xp++;
         LevelCounterText.text = "Level: " + xp;
         XPBar.value = xp;
-        Debug.Log("Health Increased to: " + xp);
-        
     }
 
     public void UpdateScreen()
