@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class GameManager :  MonoBehaviour
 {
     private static int xp;
-    public  Slider XPBar;
-    public  Text LevelCounterText;
+    public int imgNumberCount;
+    public Slider XPBar;
+    public Text LevelCounterText;
+    public Sprite Stage1Manticore;
+    public Sprite Stage2Manticore;
+    public Sprite Stage3Manticore;
 
     public int getXP()
     {
@@ -16,9 +20,12 @@ public class GameManager :  MonoBehaviour
 
     public void setXP()
     {
-        xp++;
-        LevelCounterText.text = "Level: " + xp;
-        XPBar.value = xp;
+        if (xp != 20)
+        {
+            xp++;
+            LevelCounterText.text = "Level: " + xp;
+            XPBar.value = xp;
+        }
     }
 
     public void UpdateScreen()
@@ -32,7 +39,6 @@ public class GameManager :  MonoBehaviour
     {
         SceneManager.LoadScene("CreatureScreen");
         setXP();
-        
     }
 
     public void LoadMinigame1Scene()
@@ -55,4 +61,34 @@ public class GameManager :  MonoBehaviour
         LevelCounterText.text = "Level: " + xp;
         XPBar.value = xp; 
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
+
+    public void changeImages() // make sure to attach this to event trigger
+    {
+        switch (imgNumberCount)
+        {
+
+            case 0:
+                GetComponent<Image>().sprite = Stage1Manticore;
+                imgNumberCount++; //increase count so it gets higher and switches to different sprite
+                break;
+            case 1:
+                GetComponent<Image>().sprite = Stage2Manticore;
+                imgNumberCount++;
+                break;
+            case 2:
+                GetComponent<Image>().sprite = Stage3Manticore;
+                imgNumberCount++;
+                imgNumberCount = 0; //Reset it to 0
+                break;
+            default:
+                Debug.Log("Error");
+                break;
+        }
+    }
 }
+
