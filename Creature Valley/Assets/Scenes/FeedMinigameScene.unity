@@ -814,8 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374e2e1a5e6394c448d65292cafc748f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  jumpforce: 6
+  speed: 30
+  jumpforce: 7
   rb: {fileID: 777746913}
 --- !u!61 &777746912
 BoxCollider2D:
@@ -1303,12 +1303,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4872a13dafbd39248b3ac3f59fbd29b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgNumberCount: 0
+  midxp: 0
+  maxxp: 0
   XPBar: {fileID: 0}
   LevelCounterText: {fileID: 0}
-  Stage1Manticore: {fileID: 0}
-  Stage2Manticore: {fileID: 0}
-  Stage3Manticore: {fileID: 0}
+  ManticoreCreature0: {fileID: 0}
+  ManticoreCreature1: {fileID: 0}
+  ManticoreCreature2: {fileID: 0}
 --- !u!4 &1601369632
 Transform:
   m_ObjectHideFlags: 0

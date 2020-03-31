@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame3Scene.unity
     guid: 2fd66c699782d61459da2f9bdba98add
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/FeedMinigameScene.unity
     guid: cff5ca029c8151746b7fa02bda2588bb
   m_configObjects: {}

@@ -71,17 +71,22 @@ public class GameManager :  MonoBehaviour
 
     public void LoadMinigame1Scene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("FeedMinigameScene");
     }
 
     public void LoadMinigame2Scene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("FeedMinigameScene");
     }
 
     public void LoadMinigame3Scene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("FeedMinigameScene");
+    }
+
+    public void LoadStartScene()
+    {
+        SceneManager.LoadScene("StartScreenScrene");
     }
 
     public void Start()

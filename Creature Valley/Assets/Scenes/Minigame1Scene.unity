@@ -303,8 +303,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4872a13dafbd39248b3ac3f59fbd29b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midxp: 0
+  maxxp: 0
   XPBar: {fileID: 194184386}
   LevelCounterText: {fileID: 1411841030}
+  ManticoreCreature0: {fileID: 0}
+  ManticoreCreature1: {fileID: 0}
+  ManticoreCreature2: {fileID: 0}
 --- !u!1 &694278444
 GameObject:
   m_ObjectHideFlags: 0

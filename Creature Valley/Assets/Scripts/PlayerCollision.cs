@@ -12,7 +12,7 @@ public class PlayerCollision : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("FeedMinigameScene");
         Time.timeScale = 1f;
         gameispaused = false;
 
