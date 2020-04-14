@@ -12,7 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/CreatureScreen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Minigame1Scene.unity
+    path: Assets/Scenes/PlayMinigameScene.unity
+    guid: cff5ca029c8151746b7fa02bda2588bb
+  - enabled: 1
+    path: Assets/Scenes/FeedMinigameScene.unity
     guid: e3415103c59e5b3418395ae0196d875d
   - enabled: 1
     path: Assets/Scenes/Minigame2Scene.unity
@@ -20,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigame3Scene.unity
     guid: 2fd66c699782d61459da2f9bdba98add
-  - enabled: 1
-    path: Assets/Scenes/FeedMinigameScene.unity
-    guid: cff5ca029c8151746b7fa02bda2588bb
   m_configObjects: {}

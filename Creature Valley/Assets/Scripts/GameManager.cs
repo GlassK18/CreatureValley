@@ -27,7 +27,7 @@ public class GameManager :  MonoBehaviour
             LevelCounterText.text = "Level: " + xp;
             XPBar.value = xp;
 
-            if (xp == midxp)
+            if (xp >= midxp)
             {
                 ManticoreCreature0.SetActive(false);
                 ManticoreCreature1.SetActive(true);
@@ -48,7 +48,7 @@ public class GameManager :  MonoBehaviour
         LevelCounterText.text = "Level: " + xp;
         XPBar.value = xp;
 
-        if (xp == midxp)
+        if (xp >= midxp)
         {
             ManticoreCreature0.SetActive(false);
             ManticoreCreature1.SetActive(true);
@@ -69,19 +69,19 @@ public class GameManager :  MonoBehaviour
         setXP();
     }
 
-    public void LoadMinigame1Scene()
+    public void LoadPlayMinigameScene()
     {
-        SceneManager.LoadScene("FeedMinigameScene");
+        SceneManager.LoadScene("PlayMinigameScene");
     }
 
     public void LoadMinigame2Scene()
     {
-        SceneManager.LoadScene("FeedMinigameScene");
+        SceneManager.LoadScene("Minigame2Scene");
     }
 
     public void LoadMinigame3Scene()
     {
-        SceneManager.LoadScene("FeedMinigameScene");
+        SceneManager.LoadScene("Minigame3Scene");
     }
 
     public void LoadStartScene()
@@ -94,7 +94,7 @@ public class GameManager :  MonoBehaviour
         LevelCounterText.text = "Level: " + xp;
         XPBar.value = xp;
 
-        if (xp == midxp)
+        if (xp >= midxp)
         {
             ManticoreCreature0.SetActive(false);
             ManticoreCreature1.SetActive(true);
