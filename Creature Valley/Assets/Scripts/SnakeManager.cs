@@ -5,17 +5,21 @@ using CodeMonkey;
 using CodeMonkey.Utils;
 public class SnakeManager : MonoBehaviour
 {
+    [SerializeField] private Snake snake;
+    private LevelGrid levelGrid;
+
     // Start is called before the first frame update
-    void Start()
+   private void Start()
     {
-        GameObject snakeHeadGameObject = new GameObject();
-        SpriteRenderer snakeSpriteRenderer = snakeHeadGameObject.AddComponent<SpriteRenderer>();
-        snakeSpriteRenderer.sprite = SnakeAssets.instance.snakeHeadSprite;
+        levelGrid = new LevelGrid(20, 20);
+
+        snake.Setup(levelGrid);
+        levelGrid.Setup(snake);
+
+       // GameObject snakeHeadGameObject = new GameObject();
+       // SpriteRenderer snakeSpriteRenderer = snakeHeadGameObject.AddComponent<SpriteRenderer>();
+       // snakeSpriteRenderer.sprite = SnakeAssets.instance.snakeHeadSprite;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
