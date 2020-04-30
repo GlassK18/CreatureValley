@@ -6,13 +6,19 @@ using CodeMonkey.Utils;
 
 public class Snake : MonoBehaviour
 {
-    private Vector2Int gridMoveDirection;
+
+    private enum Direction
+    {
+        Left, Right, Up, Down
+    }
+    private Direction gridMoveDirection;
     private Vector2Int gridPosition;
     private float gridMoveTimer;
     private float gridMoveTimerMax;
     private LevelGrid levelGrid;
     private int snakeBodySize;
-    private List<Vector2Int> snakeMovePositionList;
+    private List<SnakeMovePosition> snakeMovePositionList;
+    private List<SnakeBodyPart> snakeBodyPartList;
 
     public void Setup(LevelGrid levelGrid)
     {
@@ -24,10 +30,12 @@ public class Snake : MonoBehaviour
         gridPosition = new Vector2Int(10, 10);
         gridMoveTimerMax = .5f;
         gridMoveTimer = gridMoveTimerMax;
-        gridMoveDirection = new Vector2Int(1, 0);
+        gridMoveDirection = Direction.Right;
 
-        snakeMovePositionList = new List<Vector2Int>();
+        snakeMovePositionList = new List<SnakeMovePosition>();
         snakeBodySize = 0;
+
+        snakeBodyPartList = new List<SnakeBodyPart>();
     }
 
     private void Update()
@@ -40,38 +48,34 @@ public class Snake : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (gridMoveDirection.y != -1)
+            if (gridMoveDirection != Direction.Down)
             {
-                gridMoveDirection.x = 0;
-                gridMoveDirection.y = +1;
+                gridMoveDirection = Direction.Up;
             }
 
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if (gridMoveDirection.y != +1)
+            if (gridMoveDirection != Direction.Up)
             {
-                gridMoveDirection.x = 0;
-                gridMoveDirection.y = -1;
+                gridMoveDirection = Direction.Down;
             }
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if (gridMoveDirection.x != +1)
+            if (gridMoveDirection != Direction.Right)
             {
-                gridMoveDirection.x = -1;
-                gridMoveDirection.y = 0;
+                gridMoveDirection = Direction.Left;
             }
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (gridMoveDirection.x != -1)
+            if (gridMoveDirection != Direction.Left)
             {
-                gridMoveDirection.x = +1;
-                gridMoveDirection.y = 0;
+                gridMoveDirection = Direction.Right;
             }
         }
     }
@@ -83,15 +87,27 @@ public class Snake : MonoBehaviour
         {
             gridMoveTimer -= gridMoveTimerMax;
 
-            snakeMovePositionList.Insert(0, gridPosition);
+            SnakeMovePosition snakeMovePosition = new SnakeMovePosition(gridPosition, gridMoveDirection);
+            snakeMovePositionList.Insert(0, snakeMovePosition);
 
-            gridPosition += gridMoveDirection;
+            Vector2Int gridMoveDirectionVector;
+            switch (gridMoveDirection)
+            {
+                default:
+                case Direction.Right: gridMoveDirectionVector = new Vector2Int(+1, 0); break;
+                case Direction.Left: gridMoveDirectionVector = new Vector2Int(-1, 0); break;
+                case Direction.Up: gridMoveDirectionVector = new Vector2Int(0, +1); break;
+                case Direction.Down: gridMoveDirectionVector = new Vector2Int(0, -1); break;
+            }
+
+            gridPosition += gridMoveDirectionVector;
 
             bool snakeAteFood = levelGrid.TrySnakeEatFood(gridPosition);
             if (snakeAteFood)
             {
                 //Snake ate, grow body
                 snakeBodySize++;
+                CreateSnakeBodyPart();
             }
 
             if (snakeMovePositionList.Count >= snakeBodySize + 1)
@@ -99,17 +115,30 @@ public class Snake : MonoBehaviour
                 snakeMovePositionList.RemoveAt(snakeMovePositionList.Count - 1);
             }
 
-            for (int i = 0; i < snakeMovePositionList.Count; i++)
+            /*for (int i = 0; i < snakeMovePositionList.Count; i++)
             {
                 Vector2Int snakeMovePosition = snakeMovePositionList[i];
                 World_Sprite worldSprite = World_Sprite.Create(new Vector3(snakeMovePosition.x, snakeMovePosition.y), Vector3.one * .5f, Color.white);
                 FunctionTimer.Create(worldSprite.DestroySelf, gridMoveTimerMax);
-            }
+            }*/
 
             transform.position = new Vector3(gridPosition.x, gridPosition.y);
-            transform.eulerAngles = new Vector3(0, 0, GetAngleFromVector(gridMoveDirection) - 90);
+            transform.eulerAngles = new Vector3(0, 0, GetAngleFromVector(gridMoveDirectionVector) - 90);
 
-           
+            UpdateSnakeBodyParts();
+        }
+    }
+
+    private void CreateSnakeBodyPart()
+    {
+        snakeBodyPartList.Add(new SnakeBodyPart(snakeBodyPartList.Count));
+    }
+
+    private void UpdateSnakeBodyParts()
+    {
+        for (int i = 0; i < snakeBodyPartList.Count; i++)
+        {
+            snakeBodyPartList[i].SetSnakeMovePosition(snakeMovePositionList[i]);
         }
     }
 
@@ -129,7 +158,71 @@ public class Snake : MonoBehaviour
     public List<Vector2Int> GetFullSnakeGridPositionList()
     {
         List<Vector2Int> gridPositionList = new List<Vector2Int>() { gridPosition };
-        gridPositionList.AddRange(snakeMovePositionList);
+        foreach (SnakeMovePosition snakeMovePosition in snakeMovePositionList)
+        {
+            gridPositionList.Add(snakeMovePosition.GetGridPosition());
+        }
         return gridPositionList;
+    }
+
+    private class SnakeBodyPart
+    {
+        private SnakeMovePosition snakeMovePosition;
+        private Transform transform;
+
+        public SnakeBodyPart(int bodyIndex)
+        {
+            GameObject snakeBodyGameObject = new GameObject("SnakeBody", typeof(SpriteRenderer));
+            snakeBodyGameObject.GetComponent<SpriteRenderer>().sprite = SnakeAssets.instance.snakeBodySprite;
+            snakeBodyGameObject.GetComponent<SpriteRenderer>().sortingOrder = -bodyIndex;
+            transform = snakeBodyGameObject.transform;
+        }
+
+        public void SetSnakeMovePosition(SnakeMovePosition snakeMovePosition)
+        {
+            this.snakeMovePosition = snakeMovePosition;
+            transform.position = new Vector3(snakeMovePosition.GetGridPosition().x, snakeMovePosition.GetGridPosition().y);
+
+            float angle;
+            switch (snakeMovePosition.GetDirection())
+            {
+                default:
+                case Direction.Up:
+                    angle = 0;
+                    break;
+                case Direction.Down:
+                    angle = 180;
+                    break;
+                case Direction.Left:
+                    angle = -90;
+                    break;
+                case Direction.Right:
+                    angle = 90;
+                    break;
+            }
+            transform.eulerAngles = new Vector3(0, 0, angle);
+        }
+    }
+
+    private class SnakeMovePosition
+    {
+        private Vector2Int gridPosition;
+        private Direction direction;
+
+        public SnakeMovePosition(Vector2Int gridPosition, Direction direction)
+        {
+            this.gridPosition = gridPosition;
+            this.direction = direction;
+        }
+
+        public Vector2Int GetGridPosition()
+        {
+            return gridPosition;
+        }
+
+        public Direction GetDirection()
+        {
+            return direction;
+        }
     }
 }

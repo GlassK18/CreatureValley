@@ -74,14 +74,9 @@ public class GameManager :  MonoBehaviour
         SceneManager.LoadScene("PlayMinigameScene");
     }
 
-    public void LoadMinigame2Scene()
+    public void LoadFeedMinigameScene()
     {
-        SceneManager.LoadScene("Minigame2Scene");
-    }
-
-    public void LoadMinigame3Scene()
-    {
-        SceneManager.LoadScene("Minigame3Scene");
+        SceneManager.LoadScene("FeedMinigameScene");
     }
 
     public void LoadStartScene()
