@@ -1,20 +1,24 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CodeMonkey.Assets
     - DontDestroyScript
     - FinalScore
     - GameManager
+    - GameOverWindow
     - LoadHomeScene
     - LoadScene
     - PlayerCollision
     - PlayerMovement
     - Score
+    - Snake
+    - SnakeAssets
+    - SnakeManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -44,29 +48,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9660}
     - Class: 114
-      Script: {instanceID: 9818}
+      Script: {instanceID: 9820}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9860}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 10056}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10252}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 10266}
     - Class: 114
-      Script: {instanceID: 10670}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 10696}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 10860}
     - Class: 114
-      Script: {instanceID: 11316}
+      Script: {instanceID: 11082}
     - Class: 114
-      Script: {instanceID: 11364}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11360}
     - Class: 114
-      Script: {instanceID: 11428}
+      Script: {instanceID: 11442}
+    - Class: 114
+      Script: {instanceID: 11482}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -81,7 +87,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Minigame1Scene.unity:
+    Assets/Scenes/FeedMinigameScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -101,28 +107,32 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9660}
     - Class: 114
-      Script: {instanceID: 9810}
+      Script: {instanceID: 9792}
     - Class: 114
-      Script: {instanceID: 9818}
+      Script: {instanceID: 9812}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9860}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10252}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 10266}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 11082}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11158}
     - Class: 114
-      Script: {instanceID: 11428}
+      Script: {instanceID: 11178}
+    - Class: 114
+      Script: {instanceID: 11442}
+    - Class: 114
+      Script: {instanceID: 13370}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -132,85 +142,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Minigame2Scene.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 9660}
-    - Class: 114
-      Script: {instanceID: 9858}
-    - Class: 114
-      Script: {instanceID: 10238}
-    - Class: 114
-      Script: {instanceID: 10584}
-    - Class: 114
-      Script: {instanceID: 11042}
-    - Class: 114
-      Script: {instanceID: 11136}
-    - Class: 114
-      Script: {instanceID: 11396}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/Minigame3Scene.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 9660}
-    - Class: 114
-      Script: {instanceID: 9858}
-    - Class: 114
-      Script: {instanceID: 10238}
-    - Class: 114
-      Script: {instanceID: 10584}
-    - Class: 114
-      Script: {instanceID: 11042}
-    - Class: 114
-      Script: {instanceID: 11136}
-    - Class: 114
-      Script: {instanceID: 11396}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/PlayMinigameScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -240,27 +172,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9660}
     - Class: 114
-      Script: {instanceID: 9818}
+      Script: {instanceID: 9820}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9860}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10252}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 10618}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 10808}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 10860}
     - Class: 114
-      Script: {instanceID: 12646}
+      Script: {instanceID: 10870}
     - Class: 114
-      Script: {instanceID: 12648}
+      Script: {instanceID: 11082}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 11442}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -284,7 +216,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -293,18 +229,24 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9660}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9820}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 9860}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 10252}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 11082}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11178}
+    - Class: 114
+      Script: {instanceID: 11442}
+    - Class: 114
+      Script: {instanceID: 11456}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -355,6 +297,12 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Snake
+  - hash:
+      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -401,6 +349,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 05cede3f915399cac147f9e5eea79328
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.MonoBehaviours
+    className: PositionRendererSorter
   - hash:
       serializedVersion: 2
       Hash: 9e70ecf91466f07d9bd649be625cae52
@@ -499,6 +453,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 510620554e7dac56e3bb7bf101f71d9a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SnakeManager
+  - hash:
+      serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -541,6 +501,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 5b1d3232bdaba52e260d32a9eb24296b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.MonoBehaviours
+    className: CameraFollowSetup
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -557,6 +523,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 5f742a4d2c952d529c1ee301b35d93f0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FinalScore
   - hash:
       serializedVersion: 2
       Hash: 92da9881aed190e8bb74661bcd74aa2c
@@ -581,6 +553,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 4263e91c9f20d206255e9e8090156da5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMovement
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -613,6 +591,18 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: d945815862a836a59536f2167600be69
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerCollision
+  - hash:
+      serializedVersion: 2
+      Hash: 969c695330e7c420124f00dc5501b43d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Score
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -623,6 +613,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: XPScript
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.MonoBehaviours
+    className: CameraFollow
+  - hash:
+      serializedVersion: 2
+      Hash: a2b249e27e25a975ba9d3c9b8e130910
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.Utils
+    className: Button_UI
   - hash:
       serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
@@ -649,7 +651,13 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: a3af4ab9b8a2b31e841abfffd7a533bd
+      Hash: 2cc97e208d370e57139395a346e8547d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SnakeAssets
+  - hash:
+      serializedVersion: 2
+      Hash: e7f06793f3b935d89e921398bfc4248f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -665,6 +673,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.MonoBehaviours
+    className: ComponentActions
   - hash:
       serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
@@ -715,6 +729,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: fa653120b8e2e20f2e5fa15091afeb95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey.Utils
+    className: Button_Sprite
+  - hash:
+      serializedVersion: 2
       Hash: 7090bc1e5ccaec2a9d0d1335ed8cee99
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -731,6 +751,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 8a2193d36589610b9a9a816079abc21d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CodeMonkey
+    className: Assets
   - hash:
       serializedVersion: 2
       Hash: 3ab7272a8b7d3ea5a142e0c9b6aae63b
@@ -763,34 +789,15 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 5f742a4d2c952d529c1ee301b35d93f0
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: FinalScore
-  - hash:
-      serializedVersion: 2
-      Hash: 4263e91c9f20d206255e9e8090156da5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerMovement
-  - hash:
-      serializedVersion: 2
-      Hash: d945815862a836a59536f2167600be69
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerCollision
-  - hash:
-      serializedVersion: 2
-      Hash: 969c695330e7c420124f00dc5501b43d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Score
+    className: GameOverWindow
   platform: 19
   scenePathNames:
   - Assets/Scenes/StartScreenScrene.unity
   - Assets/Scenes/CreatureScreen.unity
-  - Assets/Scenes/Minigame1Scene.unity
-  - Assets/Scenes/Minigame2Scene.unity
-  - Assets/Scenes/Minigame3Scene.unity
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/DAMcCoy4138/Desktop/Creature Valley.exe
+  - Assets/Scenes/PlayMinigameScene.unity
+  - Assets/Scenes/FeedMinigameScene.unity
+  playerPath: C:/Users/Draven/Documents/GitHub/CreatureValley/Creature Valley/Creature
+    Valley.exe

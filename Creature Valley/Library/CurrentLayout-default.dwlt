@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1093
     height: 494
-  m_MinSize: {x: 715, y: 494}
-  m_MaxSize: {x: 18010, y: 14044}
+  m_MinSize: {x: 709, y: 494}
+  m_MaxSize: {x: 18004, y: 14044}
   vertical: 0
-  controlID: 3031
+  controlID: 10676
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 813
     height: 494
-  m_MinSize: {x: 436, y: 494}
-  m_MaxSize: {x: 14006, y: 14044}
+  m_MinSize: {x: 434, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
   vertical: 1
-  controlID: 2995
+  controlID: 10677
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,10 +189,10 @@ MonoBehaviour:
     y: 222
     width: 813
     height: 272
-  m_MinSize: {x: 436, y: 272}
-  m_MaxSize: {x: 14006, y: 10022}
+  m_MinSize: {x: 434, y: 272}
+  m_MaxSize: {x: 14004, y: 10022}
   vertical: 0
-  controlID: 3038
+  controlID: 10743
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -389,9 +389,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 8.619875, y: 6.855153, z: -1.8320312}
+    m_Target: {x: 141.74554, y: -418.3525, z: -1755.8065}
     speed: 2
-    m_Value: {x: 8.619875, y: 6.855153, z: -1.8320312}
+    m_Value: {x: 141.74554, y: -418.3525, z: -1755.8065}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -424,9 +424,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 19.79131
+    m_Target: 2687.196
     speed: 2
-    m_Value: 19.79131
+    m_Value: 2687.196
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -509,7 +509,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: eaf4ffff74f8ffffd6f8ffff06f9ffff2ef9ffff54f9ffff82f9ffffa8f9ffffe8f9ffffacfaffff78fbffffec310000fa3100002c3500003a350000
+      m_ExpandedIDs: eabfffff18c0ffffbcc0ffffc6c0ffffd6c0ffffdac0ffffd2d3ffff70e2ffff2ee5ffff9ce5ffff50e6ffff8cedffff1cf4ffff5ef6ffff78f6ffff78fbffff1a310000b6390000c43900002c3a0000743a0000163b0000243b0000623e000028470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -572,19 +572,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Draven\Documents\GitHub\CreatureValley\Creature Valley
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 52300000
-    m_LastClickedID: 12370
+    m_SelectedIDs: 3e2d0000
+    m_LastClickedID: 11582
     m_ExpandedIDs: 00000000082d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -665,7 +665,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 227.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 224
